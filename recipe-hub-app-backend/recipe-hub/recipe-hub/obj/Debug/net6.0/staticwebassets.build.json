@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8gP4V9wCCKTirgugndMDktgnN+jPhzMCfi0oGWzTpnc=",
+  "Source": "recipe-hub",
+  "BasePath": "_content/recipe-hub",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
