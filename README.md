@@ -3,6 +3,7 @@
 Recipe hub is simple, database-first, angular frontend, asp .net web api with EF backend app,
 where users can register, login (done with JWT authentication), and do CRUD operations on recipes.
 
+</br>
 
 ![1](https://user-images.githubusercontent.com/102675047/219437447-234e9b2c-2f43-4191-9ce7-91d783a5d2fa.jpg)
 ![2](https://user-images.githubusercontent.com/102675047/219437454-39506fa1-4632-487e-9772-3534772bf30c.jpg)
