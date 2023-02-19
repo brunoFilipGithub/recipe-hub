@@ -1,0 +1,5 @@
+<div class="ingredient-div">
+    <p>{{ingredient.Name}}</p>
+    <i [ngClass]="ingredient.ClassName"></i>
+    <i class="fa-solid fa-xmark" (click)="onDelete(ingredient.Id)"></i>
+  </div>

@@ -1,0 +1,31 @@
+<form class="createRecipeForm" [formGroup]="createRecipeForm" (ngSubmit)="onSubmit()">
+    <div class="upsert-recipe-form-fields">
+
+        <label>What's the name of the recipe?</label>
+        <input type="text" formControlName="recipeName" />
+        <div class="errorMessage" *ngIf="displayErrorMessages && createRecipeForm.get('recipeName')?.value == ''">
+            *You must enter a name for the recipe!</div>
+
+        <label style="margin-top: 1.5rem;">Recipe decription: </label>
+        <textarea rows="5" formControlName="recipeDescription"></textarea>
+        <div class="errorMessage"
+            *ngIf="displayErrorMessages && createRecipeForm.get('recipeDescription')?.value == ''">
+            *You must enter a name for the recipe!</div>
+    </div>
+
+    <div class="ingredients-input">
+        <app-dropdown [type]="dropdownTypes.INGREDIENTS"
+            (selectedValue)="onIngredientSelect($event)"></app-dropdown>
+
+        <div class="ingredients">
+            <app-ingredient-input *ngFor="let ingredient of selectedIngredients" [ingredient]="ingredient"
+                (deleteIngredient)="onDeleteIngredient($event)"></app-ingredient-input>
+        </div>
+
+        <div class="errorMessage" *ngIf="selectedIngredients.length == 0 && displayErrorMessages">
+            *You must add at least 1 recipe ingredient!</div>
+        <div class="errorMessage" *ngIf="selectedIngredients.length != 0 && allIngredientUnitsAssigned() == false">
+            *You must assign measuring units for all of the ingredients!
+        </div>
+    </div>
+</form>

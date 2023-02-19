@@ -1,0 +1,21 @@
+<div class="recipes">
+    <div class="recipe-block" *ngFor="let recipeResponse of recipeResponses" (click)="redirectToRecipe($event, recipeResponse.Recipe.Id)">
+        <img [src]="recipeResponse.Recipe.ImageString"/>
+        <div class="recipeInfo">
+            <i *ngIf="recipeHubService.LoggedInUser!.Id == recipeResponse.Recipe.UserId" class="fa-solid fa-trash" (click)="onDeleteRecipe(recipeResponse.Recipe.Id)"></i>
+            <i *ngIf="recipeHubService.LoggedInUser!.Id == recipeResponse.Recipe.UserId" class="fas fa-edit" (click)="onEditRecipe(recipeResponse.Recipe.Id)"></i>
+            <p>{{recipeResponse.Recipe.Name}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="empty-page-div">
+    <div class="spinner-div" *ngIf="showSpinner">
+        <span><i class="fa fa-cog fa-spin" [ngStyle]="{'font-size': '4rem'}" aria-hidden="true"></i></span>
+    </div>
+
+    <div *ngIf="recipeResponses== null" class="no-recipes-div">
+        <p>No recipes to show yet.</p>
+        <p>Publish one !</p>
+    </div>
+</div>

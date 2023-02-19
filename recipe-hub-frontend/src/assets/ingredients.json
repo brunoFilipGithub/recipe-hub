@@ -1,0 +1,91 @@
+[
+    {
+        "Id" : 0,
+        "Name" : "milk",
+        "ClassName" : "fa-solid fa-cow"
+    },
+
+    {
+        "Id" : 1,
+        "Name" : "eggs",
+        "ClassName" : "fa-solid fa-egg"
+    },
+
+    {
+        "Id" : 2,
+        "Name" : "flour",
+        "ClassName" : "fa-solid fa-wheat-awn"
+    },
+
+    {
+        "Id"  : 3,
+        "Name" : "chicken",
+        "ClassName" : "fa-solid fa-drumstick-bite"
+    },
+
+    {
+        "Id"  : 4,
+        "Name" : "pork",
+        "ClassName" : "fa-solid fa-bacon"
+    },
+
+    {
+        "Id"  : 5,
+        "Name" : "cheese",
+        "ClassName" : "fa-solid fa-cheese"
+    },
+
+    {
+        "Id"  : 6,
+        "Name" : "pepperoni",
+        "ClassName" : "fa-solid fa-cookie"
+    },
+
+    {
+        "Id"  : 7,
+        "Name" : " yeast",
+        "ClassName" : "fa-solid fa-bread-slice"
+    },
+
+    {
+        "Id"  : 8,
+        "Name" : " tomato",
+        "ClassName" : "fa-solid fa-apple-whole"
+    },
+
+    {
+        "Id"  : 9,
+        "Name" : " tomato sauce",
+        "ClassName" : "fa-solid fa-jar"
+    },
+
+    {
+        "Id"  : 10,
+        "Name" : "cereal",
+        "ClassName" : "fa-solid fa-bowl-rice"
+    },
+
+    {
+        "Id"  : 11,
+        "Name" : "sausage",
+        "ClassName" : "fa-solid fa-hotdog"
+    },
+
+    {
+        "Id"  : 12,
+        "Name" : "pasta",
+        "ClassName" : "fa-solid fa-plate-wheat"
+    },
+
+    {
+        "Id"  : 13,
+        "Name" : "water",
+        "ClassName" : "fa-solid fa-whiskey-glass"
+    },
+
+    {
+        "Id"  : 14,
+        "Name" : "oil",
+        "ClassName" : "fa-solid fa-bottle-water"
+    }
+]

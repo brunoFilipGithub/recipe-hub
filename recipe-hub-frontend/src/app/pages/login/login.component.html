@@ -1,0 +1,16 @@
+<div class="login-div">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <label>E-mail</label>
+        <input type="email" formControlName="email"/>
+        <div class="errorMessage" *ngIf="displayErrorMessages && emailControl?.value == ''">*You must enter an email address</div>
+        <div class="errorMessage" *ngIf="displayErrorMessages && emailControl?.errors?.['pattern']">*Please provide a valid email address</div>
+
+        <label>Password</label>
+        <input type="password" formControlName="password"/>
+        <div class="errorMessage" *ngIf="displayErrorMessages && (passwordControl?.value == '' || passwordControl?.errors?.['minlength'])">*You must enter a password at least 6 characters long</div>
+
+        <div class="buttons-div">
+            <button class="success-button" type="submit">Login</button>
+        </div>
+    </form>
+</div>

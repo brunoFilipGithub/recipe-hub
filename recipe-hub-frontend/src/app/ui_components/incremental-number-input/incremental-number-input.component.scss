@@ -1,0 +1,83 @@
+.number-input {
+    display: flex;
+    flex-direction: row;
+
+    div {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+    }
+}
+
+.dec-div, .inc-div {
+
+    width: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dec-div {
+    border-left: 2px solid black;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.inc-div {
+    border-right: 2px solid black;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.value-div {
+    display: flex;
+    width: 4rem;
+    position: relative;
+}
+
+.enter-value-div {
+    display: flex;
+    width: 4rem;
+    border: 1px solid aqua !important;
+    border-radius: 5%;
+    z-index: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hitbox {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 0 !important;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.blinking {
+    margin: 0;
+    animation: blink 0.4s linear infinite;
+}
+
+@keyframes blink {
+    40% {
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+    
+}

@@ -1,0 +1,32 @@
+.login-div {
+    margin-top: 20%;
+    display: flex;
+    border: 3px dashed black;
+    padding: 2rem;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+
+        input {
+            width: 25rem;
+            margin-bottom: 0.5rem;
+            height: 2rem;
+            font-family: "Staatliches";
+            font-size: 1.8rem;
+        }
+
+        label {
+            font-size: 1.8rem;
+            margin-top: 0.2rem;
+        }
+    }
+    
+    .buttons-div {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+

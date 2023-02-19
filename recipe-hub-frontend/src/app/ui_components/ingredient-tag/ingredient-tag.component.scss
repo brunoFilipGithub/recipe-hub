@@ -1,0 +1,25 @@
+.ingredient-div {
+    font-size: 1.6rem;
+    height: 3rem;
+    padding: 0.7rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+
+    p, i {
+        display: inline;
+    }
+
+    .fa-xmark {
+        margin: 1rem;
+        color: red;
+        font-size: 1.7rem;
+
+        &:hover {
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

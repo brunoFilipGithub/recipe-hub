@@ -1,0 +1,21 @@
+<div class="number-input">
+    <div class="dec-div" (mousedown)="dec()" (mouseup)="clear()" (mouseleave)="clear()">-</div>
+    <ng-container *ngIf="value != 0; then default; else enterValue">
+    </ng-container>
+    
+    <ng-template #default>
+        <div class="value-div">{{value}}
+            <div class="hitbox" (click)="manuallyChangeValue()">            
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #enterValue>
+        <div class="enter-value-div">
+            {{manualValue}} 
+            <p *ngIf="manualValueEditing" class="blinking">|</p>
+        </div>
+    </ng-template>  
+    <div class="inc-div" (mousedown)="inc()" (mouseup)="clear()" (mouseleave)="clear()">+</div>
+    
+</div>

@@ -1,0 +1,49 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    color: black;
+    font-size: 10rem;
+    position: relative;
+    margin-bottom: 4rem;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(0, 128, 0, 0.726);
+    }
+
+    span {
+        display: none;
+    }
+
+    &:hover span {
+        display: block;
+        position: absolute;
+        width: max-content;
+        background-color: black;
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border: 2px solid black;
+        border-radius: 10px;
+        top: -40%;
+        left: -90%;
+        transform-origin: bottom;
+        animation: grow  130ms linear;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+  }

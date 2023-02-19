@@ -1,0 +1,140 @@
+/*::ng-deep .main-container {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}*/
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 55rem;
+}
+
+.grid-div {
+    padding: 0;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-areas: "c a"
+                         "b b"
+                         "d d"
+                         "e e";
+    margin-bottom: 6rem;
+
+    .content-box {
+        margin-top: 0.8rem;
+    }
+}
+
+.recipe-info-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.published-box {
+    width: 75%;
+    margin-bottom: 3rem;
+
+    .user-info {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: 2rem;
+            margin-right: 2rem;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            
+            border: 2px solid black;
+            border-radius: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 0.45rem 0.45rem;
+            margin : -0.03rem;
+            border-radius: 3%;
+            background-color: rgba(154, 197, 204, 0.836);
+        }
+    }
+}
+
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    min-width: 25rem;
+}
+
+.recipe-image {
+    border: 2px solid black;
+    border-radius: 2%;
+    object-fit: fill;
+    max-height: 40rem;
+}
+
+.ing-div {
+    font-size: larger;
+
+    p {
+        display: inline;
+        float: right;
+        padding: 0;
+        margin-left: 0;
+    }
+}
+
+.ing-container {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 10rem;
+    min-width: max-content;
+}
+
+.recipe-step {
+    border: 2px solid black;
+    width: 50%;
+    border-radius: 9px;
+}
+
+.steps-container {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+
+.recipe-step {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 1rem;
+
+    p {
+        max-width: 80%;
+        word-wrap: break-word;
+    }
+}
+
+.circle {
+    position: relative;
+    top: -0.5rem;
+    left: -2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    background-color: rgba(219, 85, 8, 0.836);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

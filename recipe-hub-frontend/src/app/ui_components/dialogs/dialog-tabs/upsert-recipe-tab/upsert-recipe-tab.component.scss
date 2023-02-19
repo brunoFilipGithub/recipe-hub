@@ -1,0 +1,48 @@
+.upsert-recipe-form-fields {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin-right: 1.3rem;
+
+    input, textarea {
+        font-family: 'Staatliches';
+        width: 35rem;
+        font-size: 1.5rem;
+    }
+
+    input {
+        height: 2.5rem;
+    }
+
+    textarea  {
+        height: 21rem;
+        resize: none;
+    }
+
+}
+
+.createRecipeForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 2rem 0;
+    background-color: rgb(124, 124, 124);
+    border: 3px solid black;
+    border-radius: 8px;
+    overflow-y: scroll;
+    min-height: 6rem;
+    max-height: 13rem;
+    padding: 1.5rem;
+}
+
+.ingredients-input {
+    display:block;
+    margin-top: 1rem;
+}

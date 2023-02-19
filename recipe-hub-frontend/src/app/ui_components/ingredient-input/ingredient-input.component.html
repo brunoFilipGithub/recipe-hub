@@ -1,0 +1,12 @@
+<div class="ingredient-input">
+
+    <app-ingredient-tag [ingredient]="ingredient" (deleteEvent)="onDeleteIngredient($event)"></app-ingredient-tag>
+
+    <app-incremental-number-input [setValue]="ingredient.Quantity >= 1 ? ingredient.Quantity : 1" (valueEmitter)="updateUnitValue($event)"></app-incremental-number-input>
+
+    <div class="unit-input">
+        <app-dropdown [type]="dropdownType.UNITS" (selectedValue)="onSelectUnit($event)"></app-dropdown>
+        <div class="unit" *ngIf="ingredient.MeasuringUnit != undefined">{{ingredient.MeasuringUnit}}</div>
+    </div>
+
+</div>

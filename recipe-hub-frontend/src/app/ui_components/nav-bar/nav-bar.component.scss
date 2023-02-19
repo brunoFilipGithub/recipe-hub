@@ -1,0 +1,25 @@
+$navBarColor : rgb(93, 194, 194);
+
+.nav-bar {
+    display: flex;
+    height: 3.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $navBarColor;
+}
+
+.nav-button {
+    border: 0;
+    background-color: $navBarColor;
+    height: 4rem;
+    font-size: 2.2rem;
+    font-family: 'Staatliches';
+
+    &:hover {
+        cursor: pointer;
+        border-radius: 40px;
+        background-color: rgb(255, 236, 127);
+    }
+}

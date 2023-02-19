@@ -1,0 +1,130 @@
+.dots-div {
+    max-width: 30rem;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start space-evenly;
+    gap: 1.3rem;
+
+    .dot:not(:first-child) {
+
+        &::before {
+            content: '>';
+            width: 1rem;
+            height: 1rem;
+            font-size: 0.9rem;
+            color: black;
+            position: absolute;
+            left: -0.9rem;
+            font-weight: bold;
+        }
+
+        &:hover {
+
+            .delete-dot {
+                display: flex;
+                position: absolute;
+                width: 1.8rem;
+                height: 1.8rem;
+                margin: 0.2rem;
+                top: -0.8rem;
+                right: -0.8rem;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: red;
+                border-radius: 50%;
+                background-color: black;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.dot {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.delete-dot {
+    display: none;
+}
+
+.step-creation-div {
+    p {
+        font-size: 1.5rem;
+    }
+
+    form {
+            position: relative;
+
+            p {
+                margin-left: 1rem !important;
+                font-weight: bolder;
+            }
+    
+            textarea {
+                position: relative;
+                width: 100%;
+                min-width: 28rem;
+                height: 15rem;
+                max-height: 13rem;
+                resize: none;
+                font-family: "Staatliches";
+                font-size: 1.6rem;
+                padding: 0;
+                margin :0;
+            }
+
+            .remove-step-div {
+                width: calc(100% + 1px);
+                min-width: calc(25rem + 1px);
+                height: calc(13rem + 1px);
+                max-height: calc(13rem + 1px);
+                border: 1px dashed black;
+                border-radius: 2%;
+                position: absolute;
+                background-color: red;
+                opacity: 100%;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                z-index: 1;
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                i {
+                    font-size: 3rem;
+                    color: black;
+                    pointer-events: all;
+                    padding: 2rem;
+                }
+
+                i:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+}
+
+.green {
+    background-color: green;
+}

@@ -1,0 +1,51 @@
+<div class="dots-div">
+    <!-- Dot-->
+   <span *ngFor="let s of steps" [ngClass]="{ 'dot' : true, 'green' : currentStep.Index == s.Index }" (click)="onSelectStep(s.Index)">
+        <span class="delete-dot">
+            <i class="fa-solid fa-xmark" (click)="onDeleteStep($event, s.Index)">
+
+            </i> 
+        </span>{{s.Index + 1}}
+    </span>
+    <!-- Dot-->
+</div>
+
+<div class="step-creation-div">
+    <p *ngIf="steps.length < 2">Tell us the first step:</p>
+    <p *ngIf="steps.length > 1">Step {{currentStep.Index+1}}:</p>
+
+    <form [formGroup]="stepForm" (ngSubmit)="onSubmit()">
+
+        <div *ngIf="currentStep.Index >= 2 && currentStep.Text.length < 1" class="remove-step-div">
+            <p>Start typing or press "X" to remove this step.</p>
+            <i class="fa-solid fa-xmark" (click)="onDeleteStep($event, currentStep.Index)">
+            </i> 
+        </div>
+
+        <textarea formControlName="textareaText" (focusout)="outOffFocusTextarea()" (focus)="onFocusTextarea()" (input)="onTextareaChange($event)"></textarea>
+
+
+        <div class="errorMessage" *ngIf="displayTextareaMessage && !stepTextareaValid()">
+            *Each step must have at least 10 characters!
+        </div>
+
+        <div class="errorMessage" *ngIf="displaySubmitMessage && !stepsValid()">
+            *A recipe must have at least 2 steps!
+        </div>
+ 
+        <div class="buttons-div">
+            <ng-container *ngIf="currentStep.Index == steps[steps.length-1].Index || initialValue; then addStep; else editStep">
+            </ng-container>
+            
+            <ng-template #addStep>
+                <button type="button" class="success-button" (click)="onAddStep()">Add Step</button>
+            </ng-template>
+
+            <ng-template #editStep>
+                <button type="button" class="success-button" (click)="onEditStep(currentStep.Index)">Edit Step</button>
+            </ng-template>        
+             
+        </div>
+        <!-- <button type="submit" class="success-button" style="background-color:rgb(0, 140, 255)">Next</button> -->
+    </form>
+</div>

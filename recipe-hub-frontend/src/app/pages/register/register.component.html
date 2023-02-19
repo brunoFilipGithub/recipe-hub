@@ -1,0 +1,35 @@
+<div class="register-div">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-fields-div">
+            <label>E-mail</label>
+            <input type="email" formControlName="email"/>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && emailControl?.value == ''">*You must enter an email address</div>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && emailControl?.errors?.['pattern']">*Please provide a valid email address</div>
+
+            <label>User name</label>
+            <input type="text" formControlName="userName"/>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && userNameControl?.errors?.['required']">*You must choose your user name!</div>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && userNameControl?.errors?.['minlength']">*Username must be at least 4 charaters long!</div>
+
+            <label>Password</label>
+            <input type="password" formControlName="password"/>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && passwordControl?.value == ''">*You must enter a password</div>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && passwordControl?.errors?.['minlength']">*Password must be at least 6 charaters long!</div>
+
+            <label>Repeat password</label>
+            <input type="password" formControlName="repeatPassword"/>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && repeatPasswordControl?.value == ''">*You must repeat a password</div>
+            <div class="errorMessage" style="width: 80%;" *ngIf="displayErrorMessages && !passwordsEqual()">*Passwords must match!</div>
+        </div>
+
+        <div class="img-div">
+            <p>Upload your avatar image:</p>
+            <app-file-upload (base64)="onImageUpload($event)" ></app-file-upload>
+        </div>
+
+        <div class="buttons-div">
+            <button class="success-button" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+

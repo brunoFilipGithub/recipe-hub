@@ -1,0 +1,5 @@
+<div class="recipe-image-div">
+    <h1>Last step!</h1>
+    <p>Please upload an image of the dish made from this recipe: </p>
+    <app-file-upload [initialValue]="initialValue ? initialValue : ''" (base64)="setBase64Value($event)" style="max-width: 20rem;"></app-file-upload>
+<div>

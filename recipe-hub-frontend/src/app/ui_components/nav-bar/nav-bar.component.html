@@ -1,0 +1,12 @@
+<div class="nav-bar">
+    <div class="nav-bar-div-on-right">
+      <button class="nav-button" routerLink="/recipes-page">Home</button>
+      <button class="nav-button" *ngIf="isUserAuthenticated" routerLink="/user-page" style="margin-left: 2rem;">My recipes</button>
+    </div>
+  
+      <div class="nav-bar-div-on-right">
+        <button class="nav-button" *ngIf="!isUserAuthenticated" routerLink="/register-page">Register</button>
+        <button class="nav-button" *ngIf="!isUserAuthenticated" routerLink="/login-page" style="margin-left: 2rem;">Login</button>
+        <button class="nav-button" *ngIf="isUserAuthenticated"><a (click)="logOut()">Log out</a></button>
+      </div>
+  </div>

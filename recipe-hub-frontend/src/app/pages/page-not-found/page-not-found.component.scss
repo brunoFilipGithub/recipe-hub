@@ -1,0 +1,13 @@
+.not-found-div {
+    margin: 10rem;
+    border: 3px dashed black;
+    padding: 2rem;
+
+    * {
+        display: block;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}

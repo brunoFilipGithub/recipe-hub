@@ -1,0 +1,53 @@
+<div class="dialog-background">
+  <div class="dialog">
+    <div *ngIf="dialogData.tabs" class="tabs">
+      <div *ngFor="let tab of dialogData.tabs" class="tab" [ngClass]="activeTab?.tabType == tab.tabType ? 'activeTab' : '' ">
+        <p>{{tab.tabTitle}}</p>
+      </div>
+    </div>
+
+
+    <div class="dialog-header">
+      <h1>{{title}}</h1>
+      <i class="fa-solid fa-xmark" (click)="close()"></i>
+    </div>
+
+    <div class="dialog-body">
+      <ng-template appInsertion> </ng-template>
+      <p *ngIf="!dialogData.dialogChildComponentType" style="font-size: 1.5rem;">{{dialogData.data.text}}</p>
+    </div>
+
+    <div class="dialog-footer" [ngSwitch]="dialogData.dialogActions">
+      <div *ngSwitchCase="dialogActions.MessageDialogActions">
+        <ng-container *ngTemplateOutlet="msgDialogActions"></ng-container>
+      </div>
+      <div *ngSwitchCase="dialogActions.TabActions">
+        <ng-container *ngTemplateOutlet="tabDialogActions"></ng-container>
+      </div>
+      <div *ngSwitchCase="dialogActions.Default">
+        <ng-container *ngTemplateOutlet="defaultActions"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #msgDialogActions><button *ngIf="isDialogMessage;" class="success-button" (click)="close()">OK</button></ng-template>
+
+<ng-template #defaultActions>
+  <button type="button" *ngIf="!editMode" class="success-button" (click)="onSubmit()">Submit</button>
+  <button type="button" *ngIf="editMode" class="success-button" (click)="onSubmit()">Save changes</button>
+  <button class="cancel-button" (click)="close()">Cancle</button>
+</ng-template>
+
+<ng-template #tabDialogActions>
+
+    <button *ngIf="dialogData.tabs![dialogData.tabs!.length - 1].tabType != activeTab!.tabType; else finish" type="button" class="success-button" 
+    style="background-color:rgb(0, 140, 255)"(click)="onNextTab()">Next</button>
+  
+    <ng-template #finish>
+      <button type="button" *ngIf="!editMode" class="success-button" (click)="onSubmit()">Submit</button>
+      <button type="button" *ngIf="editMode" class="success-button" (click)="onSubmit()">Save changes</button>
+    </ng-template>
+
+  <button type="button" style="margin-left: 1rem;" class="cancel-button" (click)="close()">Cancel</button>
+</ng-template>

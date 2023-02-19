@@ -1,0 +1,8 @@
+<div class="dropdown">
+    {{dropdownName}}:
+    <div *ngIf="hideDropdown==false" class="dropdown-content">
+        <div *ngFor="let choice of choiceList" (click)="onSelectChoice(choice)">
+            {{choice}}
+        </div>
+    </div>
+</div>

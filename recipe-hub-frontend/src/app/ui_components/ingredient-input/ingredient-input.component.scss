@@ -1,0 +1,26 @@
+.ingredient-input{
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    app-incremental-number-input {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+}
+
+.unit-input {
+    display: inline-block;
+}
+
+
+.unit {
+    border: 1px solid black;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

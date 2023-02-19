@@ -1,0 +1,30 @@
+.dropdown {
+    font-size: 2rem;
+    width: max-content;
+    height: 1.3em;
+    border: 2px dashed black;
+    background-color: green;
+
+    &:hover .dropdown-content {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        overflow-y: auto;
+        margin-top: 1px;
+        max-height: 13.5rem;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        z-index: 1;
+
+        div {
+            height: 2.5rem;
+            border: 1px solid black;
+            background-color: green;
+        }
+    }
+}
