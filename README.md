@@ -25,5 +25,3 @@ where users can register, login (done with JWT authentication), and do CRUD oper
 
 ![7](https://user-images.githubusercontent.com/102675047/219437475-2512a4ac-f563-442f-a1bd-3820ca3a1795.jpg)
 
-
-![8](https://user-images.githubusercontent.com/102675047/219437481-baef81fa-b9ac-4e6d-99b8-8d40409a20bc.jpg)
